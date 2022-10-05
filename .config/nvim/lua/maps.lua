@@ -1,5 +1,7 @@
+local status, comments = pcall(require, "Comment.api")
+if (not status) then return end
+
 local keymap = vim.keymap.set
-local comments = require('Comment.api')
 
 -- Silent keymap option
 local opts = { silent = true }
