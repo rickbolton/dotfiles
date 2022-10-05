@@ -1,1 +1,4 @@
-require("nvim-tree").setup()
+local status, nvimTree = pcall(require, "nvim-tree")
+if (not status) then return end
+
+nvimTree.setup()

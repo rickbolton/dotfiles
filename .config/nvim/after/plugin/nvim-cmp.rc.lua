@@ -1,15 +1,14 @@
--- Setup nvim-cmp.
-local cmp = require'cmp'
-local luasnip = require'luasnip'
+local statusCmp, cmp = pcall(require, "cmp")
+if (not statusCmp) then return end
 
--- Setup nvim-cmp.
-local cmp = require'cmp'
+local statusLuasnip, luasnip = pcall(require, "luasnip")
+if (not statusLuasnip) then return end
 
 cmp.setup({
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
-			require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+			luasnip.lsp_expand(args.body) -- For `luasnip` users.
 		end,
 	},
 	window = {
