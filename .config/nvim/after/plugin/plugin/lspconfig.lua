@@ -1,8 +1,6 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
+if (not status) then return end
 local util = require("lspconfig/util")
-if not status then
-	return
-end
 
 local function config(_config)
 	local bufopts = { noremap = true, silent = true }
