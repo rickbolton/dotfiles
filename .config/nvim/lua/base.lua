@@ -59,8 +59,11 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }
 
-local cmp = require'cmp'
-local luasnip = require'luasnip'
+local statusCmp, cmp = pcall(require, "cmp")
+if (not statusCmp) then return end
+
+local statusLuasnip, luasnip = pcall(require, "luasnip")
+if (not statusLuasnip) then return end
 
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
