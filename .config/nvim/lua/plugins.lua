@@ -62,7 +62,10 @@ packer.startup(function(use)
   use {
     'numToStr/Comment.nvim',
     config = function()
-        require('Comment').setup()
+        local status, comments = pcall(require, "Comment")
+        if (not status) then return end
+
+        comments.setup()
     end
  }
 end)
