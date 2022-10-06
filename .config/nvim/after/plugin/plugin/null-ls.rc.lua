@@ -20,12 +20,9 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					vim.lsp.buf.formatting_seq_sync({
-						bufnr = bufnr,
-						--[[ filter = function(c) ]]
-						--[[ 	return c.name == "null-ls" ]]
-						--[[ end, ]]
-					})
+          vim.lsp.buf.format({
+            bufnr = bufnr
+          })
 				end,
 			})
 		end
