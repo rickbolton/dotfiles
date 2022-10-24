@@ -1,24 +1,26 @@
 local status, mason = pcall(require, "mason")
-if (not status) then return end
+if not status then
+	return
+end
 local status2, lspconfig = pcall(require, "mason-lspconfig")
-if (not status2) then return end
+if not status2 then
+	return
+end
 
-mason.setup({
+mason.setup({})
 
-})
-
-lspconfig.setup {
-  ensure_installed = {
+lspconfig.setup({
+	ensure_installed = {
 		-- lua stuff
 		"lua-language-server",
 		"stylua",
-        "sumneko_lua",
+		"sumneko_lua",
 
 		-- web dev
 		"css-lsp",
 		"html-lsp",
 		"typescript-language-server",
-        "vue-language-server",
+		"vue-language-server",
 		"deno",
 		"emmet-ls",
 		"json-lsp",
@@ -26,9 +28,9 @@ lspconfig.setup {
 		"prettier",
 		"prettierd",
 		"eslint_d",
-        "eslint-lsp",
-        "tailwindcss",
-        "prisma-language-server",
+		"eslint-lsp",
+		"tailwindcss",
+		"prisma-language-server",
 
 		-- rust
 		"rust-analyzer",
@@ -37,5 +39,5 @@ lspconfig.setup {
 		-- shell
 		"shfmt",
 		"shellcheck",
-  }
-}
+	},
+})
