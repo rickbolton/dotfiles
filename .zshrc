@@ -107,6 +107,6 @@ alias cdk="npx aws-cdk"
 export GPG_TTY=$(tty)
 
 #Ruby setup
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.7.5
+# source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+# source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+# chruby ruby-2.7.5
