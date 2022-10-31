@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -103,7 +101,8 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sites="cd ~/sites"
 alias cdk="npx aws-cdk"
-  
+alias syncm="git fetch && git push . origin/master:master"
+
 export GPG_TTY=$(tty)
 
 #Ruby setup
