@@ -70,7 +70,14 @@ export NVM_LAZY=1
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm)
+plugins=(
+  vi-mode
+  aws
+  git
+  nvm
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,6 +111,13 @@ alias cdk="npx aws-cdk"
 alias syncm="git fetch && git push . origin/master:master"
 
 export GPG_TTY=$(tty)
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 #Ruby setup
 # source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
