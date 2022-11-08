@@ -24,7 +24,7 @@ packer.startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'gruvbox-community/gruvbox'
-  use 'TimUntersberger/neogit'
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
   use 'folke/tokyonight.nvim'
   use 'Mofiqul/dracula.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
@@ -39,7 +39,7 @@ packer.startup(function(use)
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
@@ -62,10 +62,10 @@ packer.startup(function(use)
   use {
     'numToStr/Comment.nvim',
     config = function()
-        local status, comments = pcall(require, "Comment")
-        if (not status) then return end
+      local status, comments = pcall(require, "Comment")
+      if (not status) then return end
 
-        comments.setup()
+      comments.setup()
     end
- }
+  }
 end)

@@ -20,7 +20,7 @@ local function config(_config)
 			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
 
 			if client.name == "tsserver" then
-				client.resolved_capabilities.document_formatting = false
+				client.server_capabilities.document_formatting = false
 			end
 			if client.name ~= "sumneko_lua" and client.server_capabilities.documentFormattingProvider then
 				vim.api.nvim_create_autocmd("BufWritePre", {
