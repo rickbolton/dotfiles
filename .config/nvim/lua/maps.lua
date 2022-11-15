@@ -22,6 +22,9 @@ keymap("n", "<Leader>|", "<C-w>|", opts)
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "gs", ":Neogit<CR>", opts)
 
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "<C-d>", "<C-d>zz", opts)
+
 -- Comment
 keymap("n", "<leader>/", comments.call("toggle.linewise.current", "g@$"), { expr = true, silent = true })
 
