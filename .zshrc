@@ -119,6 +119,7 @@ else
   export EDITOR='nvim'
 fi
 
+set -o vi
 #Ruby setup
 # source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 # source /opt/homebrew/opt/chruby/share/chruby/auto.sh
