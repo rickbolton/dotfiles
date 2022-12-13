@@ -120,6 +120,11 @@ _G.packer_plugins = {
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["dracula.nvim"] = {
     loaded = true,
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/dracula.nvim",
@@ -154,11 +159,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
-  },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine-lsp-progress"] = {
     loaded = true,
@@ -220,6 +220,11 @@ _G.packer_plugins = {
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -245,6 +250,11 @@ _G.packer_plugins = {
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -260,6 +270,11 @@ _G.packer_plugins = {
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -274,11 +289,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
-  },
-  ["zen-mode.nvim"] = {
-    loaded = true,
-    path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

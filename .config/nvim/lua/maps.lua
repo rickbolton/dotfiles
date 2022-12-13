@@ -21,6 +21,7 @@ keymap("n", "<leader>=", "<C-w>=", opts)
 keymap("n", "<leader>|", "<C-w>|", opts)
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "gs", ":Neogit<CR>", opts)
+keymap("n", "<leader>rr", ":RustRunnables<CR>", opts)
 
 keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)

@@ -17,20 +17,17 @@ packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- Common utilities
 	use("onsails/lspkind-nvim") -- vscode-like pictogramsplugins
 	use("hrsh7th/cmp-buffer") -- nvim-cmp source for buffer words
-	use("hrsh7th/cmp-nvim-lsp") -- nvim-cmp source for neovim's built-in LSP
-	use("hrsh7th/nvim-cmp") -- Completion
 	use("neovim/nvim-lspconfig") -- LSP
 	use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
 	use("MunifTanjim/prettier.nvim") -- Prettier plugin for Neovim's built-in LSP client
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
 	use("gruvbox-community/gruvbox")
 	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
-	use("folke/tokyonight.nvim")
-	use("Mofiqul/dracula.nvim")
-	use({ "catppuccin/nvim", as = "catppuccin" })
 
-	use("glepnir/lspsaga.nvim") -- LSP UIs
+	use("folke/tokyonight.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
+	use("Mofiqul/dracula.nvim")
+	use("navarasu/onedark.nvim")
+
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
 	use({
@@ -50,7 +47,6 @@ packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 	use("norcalli/nvim-colorizer.lua")
-	use("folke/zen-mode.nvim")
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function()
@@ -58,7 +54,6 @@ packer.startup(function(use)
 		end,
 	})
 	use("akinsho/nvim-bufferline.lua")
-	-- use 'github/copilot.vim'
 
 	use("lewis6991/gitsigns.nvim")
 	use("dinhhuy258/git.nvim") -- For git blame & browse
@@ -73,6 +68,10 @@ packer.startup(function(use)
 			comments.setup()
 		end,
 	})
+
+	use("simrat39/rust-tools.nvim")
+	-- Debugging
+	use("mfussenegger/nvim-dap")
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
@@ -95,4 +94,7 @@ packer.startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
+
+	-- Copilot
+	use("github/copilot.vim")
 end)
