@@ -125,11 +125,6 @@ _G.packer_plugins = {
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -249,11 +244,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "/Users/rick.bolton/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

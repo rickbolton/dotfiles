@@ -25,8 +25,6 @@ packer.startup(function(use)
 
 	use("folke/tokyonight.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
-	use("Mofiqul/dracula.nvim")
-	use("navarasu/onedark.nvim")
 
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")

@@ -1,10 +1,6 @@
-local status, onedark = pcall(require, "onedark")
+local status, catppuccin = pcall(require, "catppuccin")
 if not status then
 	return
 end
 
-onedark.setup({
-	style = "darker",
-})
-
-onedark.load()
+vim.cmd.colorscheme("catppuccin-macchiato")
