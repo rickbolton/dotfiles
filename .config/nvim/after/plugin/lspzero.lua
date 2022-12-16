@@ -1,5 +1,4 @@
 local lsp = require("lsp-zero")
-local cmp = require("cmp")
 
 lsp.preset("recommended")
 
@@ -14,10 +13,30 @@ lsp.ensure_installed({
 	"rust_analyzer",
 })
 
+local cmp = require("cmp")
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
+local cmp_mappings = lsp.defaults.cmp_mappings({
+	["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+	["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+	["<C-b>"] = cmp.mapping.scroll_docs(-4),
+	["<C-f>"] = cmp.mapping.scroll_docs(4),
+	["<C-Space>"] = cmp.mapping.complete(),
+	["<C-e>"] = cmp.mapping.abort(),
+	["<CR>"] = cmp.mapping.confirm(cmp_select),
+})
+
+-- disable completion with tab
+-- this helps with copilot setup
+cmp_mappings["<Tab>"] = nil
+cmp_mappings["<S-Tab>"] = nil
+
+lsp.setup_nvim_cmp({
+	mapping = cmp_mappings,
+})
+
 lsp.on_attach(function(client, bufnr)
 	local noremap = { buffer = bufnr, remap = false }
 	local bind = vim.keymap.set
-	local rt = require("rust-tools")
 
 	bind("n", "gD", vim.lsp.buf.definition, noremap)
 	bind("n", "K", vim.lsp.buf.hover, noremap)
@@ -47,24 +66,6 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.nvim_workspace()
-
---[[ lsp.setup_nvim_cmp({
-	snippet = {},
-	sources = {
-		{ name = "copilot" },
-
-		{ name = "path" },
-		{ name = "nvim_lsp", keyword_length = 3 },
-		{ name = "buffer", keyword_length = 3 },
-		{ name = "luasnip", keyword_length = 2 },
-	},
-	mapping = lsp.defaults.cmp_mappings({
-		["<CR>"] = cmp.mapping.confirm({
-			behavior = cmp.ConfirmBehavior.Replace,
-			select = false,
-		}),
-	}),
-}) ]]
 
 local rust_lsp = lsp.build_options("rust_analyzer", {})
 
